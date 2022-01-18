@@ -50,7 +50,7 @@ class Product {
 
   public function getFinalPrice(){
     $finalPrice = $this->price - (($this->price * $this->discount) / 100);
-    return number_format($finalPrice, 2);
+    return number_format($finalPrice, 2, ",", "");
   }
 
 }

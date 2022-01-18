@@ -1,18 +1,17 @@
 <?php
 
-require_once __DIR__ . "/CreditCard.php";
-
 class User {
-  private $id;
   private $firstName;
   private $lastName;
   private $address;
   private $email;
   private $payment;
 
-  function __construct()
+  function __construct($_firstName, $_lastName)
   {
-    $this-> payment = new CreditCard();
+    $this->firstName = $_firstName;
+    $this->lastName = $_lastName;
+
   }
 
 
