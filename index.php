@@ -19,10 +19,14 @@ var_dump($new_user);
 $new_premium_user = new PremiumUser("Davide", "Fabio");
 var_dump($new_premium_user);
 
-$new_product = new Product("Playstation 5", "Available");
+$new_product = new Product("1234", "Playstation 5", "Available");
 $new_product->setPrice(499.99);
-$new_product->setDiscount(10);
+
+
 var_dump($new_product);
+
+$new_credit_card = new CreditCard ("Matteo Fabio", "555");
+var_dump($new_credit_card);
 
 ?>
 
@@ -39,37 +43,50 @@ var_dump($new_product);
 
  <!-- USER -->
  <h2>
-  Prodotto: <?php echo $new_product->getName() ?>
+   Utente:
+   <?php echo $new_user -> getFirstname() ?>
+   <?php echo $new_user -> getSurname() ?>
+ </h2>
+ 
+ <h2>
+   Prodotto:
+   <?php echo $new_product -> getName() ?>
  </h2>
 
- <h3>
-  Prezzo: <?php echo $new_product->getPrice() ?>
- </h3>
-
- <h4>
-  Sconto: <?php echo $new_product->getDiscount() ?> %
- </h4>
-
  <h2>
-  Prezzo scontato: <?php echo $new_product->getFinalPrice();?> €
+    Sconto:
+    <?php echo $new_user -> getDiscount() ?> &percnt;
  </h2>
 
-
- <!-- PREMIUM USER -->
  <h2>
-  Prodotto: <?php echo $new_premium_user->getName() ?>
+   Prezzo:
+   <?php echo $new_product -> getPrice() ?>
  </h2>
 
- <h3>
-  Prezzo: <?php echo $new_premium_user->getPrice() ?>
- </h3>
+ 
 
- <h4>
-  Sconto: <?php echo $new_premium_user->getDiscount() ?> %
- </h4>
+<hr>
+ <!-- USER PREMIUM  -->
 
  <h2>
-  Prezzo scontato: <?php echo $new_premium_user->setPremiumDiscount();?> €
+   Utente:
+   <?php echo $new_premium_user -> getFirstname() ?>
+   <?php echo $new_premium_user -> getSurname() ?>
+ </h2>
+ 
+ <h2>
+   Prodotto:
+   <?php echo $new_product -> getName() ?>
+ </h2>
+
+ <h2>
+    Sconto:
+    <?php echo $new_premium_user -> getDiscount() ?> &percnt;
+ </h2>
+
+ <h2>
+   Prezzo:
+   <?php echo $new_premium_user -> getFinalPrice($new_product) ?>
  </h2>
 
 

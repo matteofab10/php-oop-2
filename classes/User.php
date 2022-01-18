@@ -1,26 +1,26 @@
 <?php
 
 class User {
-  private $firstName;
-  private $lastName;
+  private $firstname;
+  private $surname;
   private $address;
   private $email;
-  private $payment;
+  protected $discount = 0;
+  private $credit_card;
 
-  function __construct($_firstName, $_lastName)
+  function __construct($_firstname, $_surname)
   {
-    $this->firstName = $_firstName;
-    $this->lastName = $_lastName;
+    $this->firstname = $_firstname;
+    $this->surname = $_surname;
 
   }
-
 
   // SETTER
-  public function setFirstName($_firstName){
-    $this->firstName = $_firstName;
+  public function setFirstname($_firstname){
+    $this->firstname = $_firstname;
   }
-  public function setLastName($_lastName){
-    $this->lastName = $_lastName;
+  public function setSurname($_surname){
+    $this->surname = $_surname;
   }
   public function setAddress($_address){
     $this->address = $_address;
@@ -28,16 +28,19 @@ class User {
   public function setEmail($_email){
     $this->email = $_email;
   }
-  public function setPayment($_payment){
-    $this->payment = $_payment;
+  public function setDiscount($_discount){
+    $this->discount = $_discount;
+  }
+  public function setCreditCard($_credit_card){
+    $this->credit_card = $_credit_card;
   }
 
   // GETTER
-  public function getFirstName(){
-    return $this->firstName;
+  public function getFirstname(){
+    return $this->firstname;
   }
-  public function getLastName(){
-    return $this->lastName;
+  public function getSurname(){
+    return $this->surname;
   }
   public function getAddress(){
     return $this->address;
@@ -45,7 +48,10 @@ class User {
   public function getEmail(){
     return $this->email;
   }
-  public function getPayment(){
-    return $this->payment;
+  public function getDiscount(){
+    return $this->discount;
+  }
+  public function getCreditCard(){
+    return $this->credit_card;
   }
 }

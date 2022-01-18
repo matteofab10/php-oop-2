@@ -3,16 +3,16 @@
 require_once __DIR__ . "/User.php";
 
 class PremiumUser extends User {
-  private $premium_discount;
   
-  function __construct($_firstName, $_lastName)
+  function __construct($_firstname, $_surname)
   {
-    parent::__construct($_firstName, $_lastName);
-    $this->discount = 10;
+    parent::__construct($_firstname, $_surname);
+    $this->discount = 40;
   }
 
-  public function setPremiumDiscount($_premium_discount){
-    $this->premium_discount += $_premium_discount;
+  public function getFinalPrice($product){
+    $finalPrice = $product->getPrice() - (($product->getPrice() * $this->discount) / 100);
+    return number_format($finalPrice, 2, ",", "");
   }
 
 }

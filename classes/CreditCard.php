@@ -7,11 +7,9 @@ class CreditCard {
   private $expiration_date;
   private $cvv;
 
-  function __construct($_holder, $_card_number, $_expiration_date, $_cvv)
+  function __construct($_holder, $_cvv)
   {
     $this->holder = $_holder;
-    $this->card_number = $_card_number;
-    $this->expiration_date = $_expiration_date;
     $this->cvv = $_cvv;
   }
 
