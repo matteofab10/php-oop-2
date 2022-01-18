@@ -4,8 +4,8 @@ require_once __DIR__ . "/CreditCard.php";
 
 class User {
   private $id;
-  private $firstname;
-  private $lastname;
+  private $firstName;
+  private $lastName;
   private $address;
   private $email;
   private $payment;
