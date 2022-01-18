@@ -15,6 +15,8 @@ class User {
     $this-> payment = new CreditCard();
   }
 
+
+  // SETTER
   public function setFirstName($_firstName){
     $this->firstName = $_firstName;
   }
@@ -31,7 +33,7 @@ class User {
     $this->payment = $_payment;
   }
 
-  
+  // GETTER
   public function getFirstName(){
     return $this->firstName;
   }

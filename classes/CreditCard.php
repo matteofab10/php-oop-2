@@ -6,7 +6,7 @@ class CreditCard {
   private $holder;
   private $card_number;
   private $expiration_date;
-  private $cvc;
+  private $cvv;
 
 
 }

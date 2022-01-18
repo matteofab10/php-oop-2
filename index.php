@@ -48,7 +48,7 @@ var_dump($new_user);
  </h4>
 
  <h2>
-   Prezzo scontato: <?php echo $new_product->getFinalPrice();?> €
+  Prezzo scontato: <?php echo $new_product->getFinalPrice();?> €
  </h2>
 
 </body>
