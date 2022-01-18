@@ -14,9 +14,13 @@ require_once __DIR__ . "/classes/CreditCard.php";
 require_once __DIR__ . "/classes/PremiumUser.php";
 
 $new_product = new Product("Playstation 5", "Available");
+$new_product->setPrice(499.99);
+$new_product->setDiscount(10);
 var_dump($new_product);
 
 $new_user = new User();
+$new_user -> setFirstName("Matteo");
+$new_user -> setLastName("Fabio");
 var_dump($new_user);
 
 ?>
@@ -31,7 +35,21 @@ var_dump($new_user);
 </head>
 <body>
   
+ <h2>
+  Prodotto: <?php echo $new_product->getName() ?>
+ </h2>
 
+ <h3>
+  Prezzo: <?php echo $new_product->getPrice() ?>
+ </h3>
+
+ <h4>
+  Sconto: <?php echo $new_product->getDiscount() ?> %
+ </h4>
+
+ <h2>
+   Prezzo scontato: <?php echo $new_product->getFinalPrice();?> €
+ </h2>
 
 </body>
 </html>
