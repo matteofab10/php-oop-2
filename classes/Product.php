@@ -47,4 +47,13 @@ class Product {
     return number_format($finalPrice, 2, ",", "");
   }
 
+  public function checkInt($discount){
+
+    if(!is_int($discount) || $discount > 100){
+      throw new Exception("Sconto non valido!");
+    }
+    
+    return  $discount;
+  }
+
 }
