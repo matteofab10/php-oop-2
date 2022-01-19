@@ -14,6 +14,10 @@ require_once __DIR__ . "/classes/CreditCard.php";
 require_once __DIR__ . "/classes/PremiumUser.php";
 
 $new_user = new User("Matteo", "Fabio");
+$new_user->age = 28;
+$new_user->address = "Via Roma";
+$new_user->language = "Italian";
+$new_user->country = "Italy";
 var_dump($new_user);
 
 $new_premium_user = new PremiumUser("Davide", "Fabio");
