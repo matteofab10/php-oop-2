@@ -1,9 +1,13 @@
 <?php
 
+require_once __DIR__ . "/info.php";
+
 class User {
+
+  use Info;
+
   private $firstname;
   private $surname;
-  private $address;
   private $email;
   protected $discount = 0;
   private $credit_card;
@@ -22,9 +26,6 @@ class User {
   public function setSurname($_surname){
     $this->surname = $_surname;
   }
-  public function setAddress($_address){
-    $this->address = $_address;
-  }
   public function setEmail($_email){
     $this->email = $_email;
   }
@@ -41,9 +42,6 @@ class User {
   }
   public function getSurname(){
     return $this->surname;
-  }
-  public function getAddress(){
-    return $this->address;
   }
   public function getEmail(){
     return $this->email;
